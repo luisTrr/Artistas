@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Artista Id</th>
+										<th>Artista</th>
 										<th>Nombre</th>
 
                                         <th></th>
@@ -47,7 +47,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $albune->artista_id }}</td>
+											<td>{{ $albune->artista->nombre }}</td>
 											<td>{{ $albune->nombre }}</td>
 
                                             <td>

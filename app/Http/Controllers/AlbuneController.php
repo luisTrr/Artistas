@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Albune;
+use App\Models\Artista;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class AlbuneController extends Controller
     public function create()
     {
         $albune = new Albune();
-        return view('albune.create', compact('albune'));
+        $artistas= Artista::pluck('nombre','id');
+        return view('albune.create', compact('albune','artistas'));
     }
 
     /**
@@ -73,8 +75,9 @@ class AlbuneController extends Controller
     public function edit($id)
     {
         $albune = Albune::find($id);
+        $artistas= Artista::pluck('nombre','id');
 
-        return view('albune.edit', compact('albune'));
+        return view('albune.edit', compact('albune','artistas'));
     }
 
     /**

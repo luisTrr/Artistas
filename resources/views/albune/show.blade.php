@@ -21,7 +21,7 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Artista Id:</strong>
+                            <strong>Artista:</strong>
                             {{ $albune->artista_id }}
                         </div>
                         <div class="form-group">
